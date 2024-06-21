@@ -1,0 +1,30 @@
+<!DOCTYPE html PuBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>적정 체중 테스트기</title>
+        <script type="text/javascript">
+            var height = 180;
+            var weight = 72;
+            var fitWeight = (height - 100) * 0.9;
+
+            document.write("신장: "+height+"(cm)","<br/>");
+            document.write("몸무게: "+weight+"(kg)","<br/>");
+            document.write("적정 체중: ("+height+"-"+weight+") x 0.9="+fitWeight+"(kg)","<br/>");
+            if(weight>fitWeight){
+                document.write("결과: 적정 체중은 "+fitWeight+"(kg)이며, 현재 적정 체중에서 "+(weight-fitWeight)+"kg 초과한 것을 알 수 있습니다.");
+            }else if(weight<fitWeight){
+                document.write("결과: 적정 체중은 "+fitWeight+"(kg)이며, 현재 적정 체중보다 "+(fitWeight-weight)+"kg 낮은 것을 알 수 있습니다.")
+
+            }else{
+                document.write("결과: 적정 체중은 "+fitWeight+"(kg)이며, 현재 적정 체중과 같습니다.");
+            }
+            
+        </script>
+
+    </head>
+    <body>
+        
+    </body>
+</html>
