@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜와 날짜 사이의 일수</title>
+    <script type="text/javascript">
+        var t = new Date();
+        var nowYear=t.getFullYear();
+
+        var theDate=new Date(nowYear,11,31); //12월 31일
+
+        var diffDate=theDate-t; //ms단위로 계산된다
+        
+        document.write("diffDate = ",diffDate,'<br/>');
+        var result=Math.ceil(diffDate / (60*1000*60*24)); //올림 메서드
+
+        document.write("현재일로 부터 올해 말일까지는 "+result+"일 남았습니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
