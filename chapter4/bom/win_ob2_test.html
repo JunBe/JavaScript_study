@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체</title>
+    <script type="text/javascript">
+        var pop=window.open("https://www.naver.com","pop1","width=300,height=40,left=300,top=10,scrollbars=no,toolbars=no,location=no");
+        function resizePopup() {
+            if (pop && !pop.closed) {
+                pop.resizeTo(200, 300);
+                pop.focus();
+            } else {
+                alert("팝업 창이 열려 있지 않거나 이미 닫혔습니다.");
+            }
+        }
+
+        function movePopup() {
+            if (pop && !pop.closed) {
+                pop.moveTo(200, 300);
+                pop.focus();
+            } else {
+                alert("팝업 창이 열려 있지 않거나 이미 닫혔습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <button onclick="movePopup()">
+            브라우저 창 위치 변경
+        </button>
+    </p>
+    <p>
+        <button onclick="resizePopup()">
+            브라우저 창 크기 변경
+        </button>
+    </p>
+</body>
+</html>
